@@ -231,3 +231,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ape configuration
+.builds/
+.caches/
