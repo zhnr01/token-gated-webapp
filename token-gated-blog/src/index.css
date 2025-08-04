@@ -1,0 +1,89 @@
+:root {
+  --bg-dark: #181818;
+  --bg-light: #f8f8f8;
+  --text-dark: #181818;
+  --text-light: rgba(255, 255, 255, 0.87);
+  --primary: #4cafef;
+  --primary-hover: #3a9ed9;
+  --card-bg-dark: #222;
+  --card-bg-light: #ffffff;
+  --border-radius: 10px;
+  --padding: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+  }
+}
+
+/* Container */
+div {
+  margin-bottom: 20px;
+  padding: var(--padding);
+  background-color: var(--card-bg-dark);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@media (prefers-color-scheme: light) {
+  div {
+    background-color: var(--card-bg-light);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 4px;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary);
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Data fields */
+div > div {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+/* Layout tweaks */
+body > div {
+  max-width: 700px;
+  margin: auto;
+}
